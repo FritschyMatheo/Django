@@ -8,10 +8,10 @@
   <body>
     <aside id="sidebar">
       {% block sidebar %}
-      <ul>
-        <li><a href="/onepiece/index">Index</a></li>
-        <li><a href="/onepiece/equipages">Les équipages</a></li>
-      </ul>
+      <nav>
+        <a href="/onepiece/index">Index</a
+        ><a href="/onepiece/equipages">Les équipages</a>
+      </nav>
       {% endblock %}
     </aside>
     <div id="content">
@@ -20,4 +20,11 @@
       {% endblock %}
     </div>
   </body>
+  <footer>
+    <div id="footer">
+      {% block footer %}
+      <h1>Pied de page</h1>
+      {% endblock %}
+    </div>
+  </footer>
 </html>

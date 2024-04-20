@@ -1,0 +1,6 @@
+#902B3D     Rouge
+#E5EAE4     Gris clair
+#AC8858     Bois
+#18191B     Noir
+
+#18191B     Vert
