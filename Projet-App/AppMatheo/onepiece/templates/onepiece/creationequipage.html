@@ -1,0 +1,13 @@
+{% extends "onepiece/main.html" %}
+
+{% block title %} Page creation équipage {% endblock %} {% block content %}
+    
+<form method="post" action="/onepiece/traitementequipage/">
+    {% csrf_token %}
+    {{ forms.as_ul }}
+
+    <input type="submit" value="Envoyer les données"/>
+
+</form>
+
+{% endblock %}
