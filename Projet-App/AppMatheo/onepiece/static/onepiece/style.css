@@ -1,3 +1,52 @@
-h1{
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    margin: 0px auto;
+    margin-block: 0px auto;
+    padding: 5px;
+}
+
+nav{
+    background-color: #AC8858;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    color: #E5EAE4;
+    text-decoration: wavy;
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: underline;
     color: #18191B;
+}
+
+
+footer#footer{
+    background-color: #AC8858;
+    text-align: center;
+    padding: 5px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #E5EAE4;
 }
