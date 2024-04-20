@@ -1,0 +1,80 @@
+"""py -m pip install --upgrade pip
+py -m pip install django"""
+
+
+py -3 -m venv .venv
+cd .\.venv\
+
+
+Dans la barre de recherche : >Python: Select Interpreter
+Prendre celui dans notre .venv
+
+
+.\Scripts\Activate.ps1
+
+"""Problème d'exécution de script résolu :
+Lancer Powershell en mode admin et taper : set-executionpolicy unrestricted	puis re faire .\Scripts\Activate.ps1"""
+
+
+django-admin startproject firstproject
+cd .\firstproject\
+
+python -m pip install --upgrade pip
+python -m pip install django
+
+python manage.py migrate
+python manage.py runserver
+Ctrl ^C
+
+python manage.py startapp myfirstapp
+
+dans .venv\firstproject\settings.py ajouter : 'myfirstapp.apps.MyfirstappConfig', là :
+
+INSTALLED_APPS = [
+    ---'myfirstapp.apps.MyfirstappConfig',---
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+]
+
+
+Créer dossier et sous dossier templates\myfirstapp dans myfirstapp
+
+Ajouter son fichier index.html dedans
+
+
+Dans views.py ajouter :
+def index(request):
+	return render(request, 'myfirstapp/index.html')
+
+Créer le fichier urls.py avec ça dedans :
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('index/', views.index),
+]
+
+
+Dans le fichier urls.py du projet, ajouter :
+
+from django.contrib import admin
+from django.urls import path ----, include----
+urlpatterns = [
+	path('admin/', admin.site.urls),
+	----path('myfirstapp/', include('myfirstapp.urls')),----
+]
+
+
+python manage.py makemigrations myfirstapp
+python manage.py migrate
+python manage.py runserver
+
+
+On accède à la page avec : http://127.0.0.1:8000/myfirstapp/index/
+
+C:\Users\e2303115\AppData\Local\Programs\Python\Python311\python.exe

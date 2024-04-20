@@ -1,0 +1,14 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: gray;
+    text-align: center;
+    size: 22px;
+}
+
+h1{
+    margin: 60px;
+    color: brown;
+    background-color: beige;
+    border-radius: 6px;
+    size: 28px;
+}

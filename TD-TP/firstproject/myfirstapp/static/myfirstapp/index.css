@@ -1,0 +1,23 @@
+*{
+    color: rgb(0, 136, 255);
+    text-decoration: double;
+    font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+    text-transform: capitalize;
+}
+
+h1{
+    color: rgb(236, 72, 72);
+    margin: 110px;
+}
+
+body{
+    background-color: rgb(56, 56, 56);
+    text-align: center;
+}
