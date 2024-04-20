@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'onepiece.apps.OnepieceConfig',
     'appcallisthenie.apps.AppcallisthenieConfig',
     'django.contrib.admin',
     'django.contrib.auth',
