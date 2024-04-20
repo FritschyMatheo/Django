@@ -10,5 +10,5 @@ class EquipageForm(ModelForm):
             'nom' : _('Nom'),
             'nombateau' : _('Nom du bateau'),
             'capitaine' : _('Capitaine de l\'équipage'),
-            'premiereapparition' : _('Chapitre de première apparition'),
+            'premiereapparition' : _('Chapitre de première apparition')
         }

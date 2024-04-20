@@ -4,8 +4,7 @@
     
 <form method="post" action="/onepiece/traitementequipage/">
     {% csrf_token %}
-    {{ forms.as_ul }}
-
+    {{ form.as_ul }}
     <input type="submit" value="Envoyer les données"/>
 
 </form>

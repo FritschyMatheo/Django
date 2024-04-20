@@ -16,7 +16,7 @@ def ajoutequipage(request):
         form = EquipageForm(request)
         if form.is_valid():
             Equipage = form.save()
-            return render(request,"onepiece/equipages.html",{"Equipage : Equipage"})
+            return render(request,"onepiece/equipages.html",{"Equipage" : Equipage})
         else:
             return render(request,"onepiece/creationequipage.html",{"form":form})
     else:
