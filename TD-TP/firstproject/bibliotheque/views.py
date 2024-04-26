@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import render
 from .forms import LivreForm
 from . import models
+from django.http import HttpResponseRedirect
 
 def index(request):
 	return render(request, 'bibliotheque/index.html')
@@ -32,3 +33,13 @@ def traitement(request):
 def read(request, id):
     Livre = models.Livre.objects.get(pk=id) # méthode pour récupérer les données dans la base avec un id donnée
     return render(request,"bibliotheque/affiche.html",{"Livre": Livre})
+
+def traitementupdate(request, id):
+    lform=LivreForm(request.POST)
+    if lform.is_valid():
+        Livre=lform.save(commit=False)
+        Livre.id=id
+        Livre.save()
+        return HttpResponseRedirect("/bibliotheque/")
+    else:
+        return render(request, "bibliotheque/update.html", {"form": lform, "id": id})

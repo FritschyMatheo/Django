@@ -3,9 +3,10 @@
 
 <h1>Page mise à jour</h1>
 
-<form method="post" action="/bibliotheque/traitementupdate/{{id}}">
-  {% csrf_token %} {{ form.as_ul }}
-  <input type="submit" value="envoyer␣les␣données" \ />
+<form method="post" action="/bibliotheque/update/{{id}}">
+  {% csrf_token %}
+  {{ form.as_ul }}
+  <input type="submit" value="envoyer les données" \>
 </form>
 
 {% endblock %}
