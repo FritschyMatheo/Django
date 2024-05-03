@@ -8,9 +8,6 @@ from . import models
 def index(request):
     return render(request, 'onepiece/index.html')
 
-def equipages(request):
-    return render(request, 'onepiece/equipages.html')
-
 def ajoutequipage(request):
     if request.method == "POST":
         form = EquipageForm(request)
