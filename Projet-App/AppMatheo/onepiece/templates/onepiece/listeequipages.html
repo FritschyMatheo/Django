@@ -2,6 +2,10 @@
 
 {% block title %} Les équipages {% endblock %} {% block content %}
     
-<p>Vous avez crée l'équipage {{Equipage}}</p>
+<ol>
+    {% for l in Equipages %}
+        <li>{{l}}</li>
+    {% endfor %}
+</ol>
 
 {% endblock %}

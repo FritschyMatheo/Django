@@ -16,7 +16,7 @@ def ajoutequipage(request):
         form = EquipageForm(request)
         if form.is_valid():
             Equipage = form.save()
-            return render(request,"onepiece/equipages.html",{"Equipage" : Equipage})
+            return render(request,"onepiece/equipage.html",{"Equipage" : Equipage})
         else:
             return render(request,"onepiece/creationequipage.html",{"form":form})
     else:
@@ -27,6 +27,10 @@ def traitementEquipage(request):
     lform = EquipageForm(request.POST)
     if lform.is_valid():
         Equipage = lform.save()
-        return render(request, "onepiece/equipages.html", {"Equipage" : Equipage})
+        return render(request, "onepiece/equipage.html", {"Equipage" : Equipage})
     else:
         return render(request, "onepiece/creationequipage.html", {"form" : lform})
+    
+def voirequipages(request):
+    Equipages = list(models.Equipage.objects.all())
+    return render(request,"onepiece/listeequipages.html", {"Equipage" : Equipages})
