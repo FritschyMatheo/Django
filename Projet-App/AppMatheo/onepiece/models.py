@@ -13,3 +13,6 @@ class Equipage(models.Model):
         else:
             chaine = f"{self.nom} dirigé par {self.capitaine} et navigue avec {self.nombateau}."
         return chaine
+    
+    def dictionnaire(self):
+        return {"nom": self.nom, "nombateau": self.nombateau, "capitaine": self.capitaine, "premiereapparition": self.premiereapparition}

@@ -1,13 +1,16 @@
-{% extends "onepiece/main.html" %}
+{% extends "onepiece/main.html" %} {% block title %} Page ajout équipage {%endblock %} {% block content %}
 
-{% block title %} Page ajout équipage {% endblock %} {% block content %}
-    
 <h1>Ajout d'un équipage à la base de données</h1>
-<form method="post" action="/onepiece/traitementequipage/">
+
+    {% if id != '' %}
+        <form method="post" action="/onepiece/traitementupdate/{{id}}/">
+
+    {% else %}
+        <form method="post" action="/onepiece/traitementequipage/">
+    {% endif %}
     {% csrf_token %}
     {{ form.as_ul }}
-    <input type="submit" value="Envoyer les données"/>
-
-</form>
+    <input type="submit" value="Envoyer les données" />
+    </form>
 
 {% endblock %}

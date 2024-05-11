@@ -38,3 +38,18 @@ def voirequipages(request):
 def afficheequipage(request, id):
     equipage = models.Equipage.objects.get( pk = id)
     return render(request,"onepiece/equipage.html", {"equipage" : equipage})
+
+def update(request, id):
+    equipage = models.Equipage.objects.get( pk = id)
+    form = EquipageForm(equipage.dictionnaire())
+    return render(request, "onepiece/creationequipage.html", {"form" : form, "id": id})
+
+def traitementupdate(request, id):
+    lform = EquipageForm(request.POST)
+    if lform.is_valid():
+        equipage = lform.save(commit=False)
+        equipage.id = id
+        equipage.save()
+        return HttpResponseRedirect("/onepiece")
+    else:
+        return render(request, "onepiece/creationequipage.html", {"form" : lform, "id": id})
