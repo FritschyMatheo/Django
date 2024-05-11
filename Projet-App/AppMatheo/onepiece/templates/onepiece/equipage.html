@@ -1,15 +1,21 @@
 {% extends "onepiece/main.html" %}
 
 {% block title %} Page affiche équipage {% endblock %} {% block content %}
-    
-<h1>Informations sur l'équipage : {{equipage.nom}} </h1>
-<ol>
-    <li>Nom : {{equipage.nom}}</li>
-    <li>Capitaine : {{equipage.capitaine}}</li>
-    <li>Bateau : {{equipage.nombateau}}</li>
-    <li>Apparition : {{equipage.premiereapparition}}</li>
-</ol>
-<a href="/onepiece/equipages">Voir la liste des équipages</a>
+  
+<article>
+    <h2>Informations sur l'équipage : {{equipage.nom}} </h2>
+    <ol>
+        <li>Nom : {{equipage.nom}}</li>
+        <li>Capitaine : {{equipage.capitaine}}</li>
+        <li>Bateau : {{equipage.nombateau}}</li>
+        <li>Apparition : {{equipage.premiereapparition}}</li>
+    </ol>
+    <footer>
+        <a href="/onepiece/equipages">Voir la liste des équipages</a>
+        <a href="/onepiece/update/{{equipage.id}}/">Modifier</a>
+        <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a>
+    </footer>
+</article>
 
 
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "onepiece/main.html" %} {% block title %} Page ajout équipage {%endblock %} {% block content %}
 
-<h1>Ajout d'un équipage à la base de données</h1>
+<article>
+<h2>Ajout d'un équipage à la base de données</h2>
 
     {% if id %}
         <form method="post" action="/onepiece/traitementupdate/{{id}}/">
@@ -11,5 +12,9 @@
     {{ form.as_ul }}
     <input type="submit" value="Envoyer les données"/>
     </form>
+    <footer>
+        <a href="/onepiece/equipages">Voir la liste des équipages</a>
+    </footer>
+</article>
 
 {% endblock %}

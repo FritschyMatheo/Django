@@ -2,11 +2,13 @@
 
 {% block title %} Les équipages {% endblock %} {% block content %}
   
-<h1>Voici la liste des équipages</h1>
+<article>
+<h2>Voici la liste des équipages</h2>
 <ol>
     {% for equipage in liste %}
-        <li>{{equipage}} <a href="/onepiece/equipage/{{equipage.id}}/">Afficher</a> <a href="/onepiece/update/{{equipage.id}}/">Modifier</a> <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a></li>
+        <li>{{equipage}} <div class="liste"><a href="/onepiece/equipage/{{equipage.id}}/">Afficher</a> <a href="/onepiece/update/{{equipage.id}}/">Modifier</a> <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a></div></li>
     {% endfor %}
 </ol>
+</article>
 
 {% endblock %}
