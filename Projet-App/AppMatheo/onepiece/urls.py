@@ -6,4 +6,5 @@ urlpatterns = [
     path('ajoutequipage/', views.ajoutequipage),
     path('traitementequipage/', views.traitementEquipage),
     path('equipages/', views.voirequipages),
+    path('equipage/<int:id>/', views.afficheequipage),
 ]

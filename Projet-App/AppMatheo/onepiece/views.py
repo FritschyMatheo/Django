@@ -27,10 +27,14 @@ def traitementEquipage(request):
     lform = EquipageForm(request.POST)
     if lform.is_valid():
         equipage = lform.save()
-        return render(request, "onepiece/equipage.html", {"equipage" : equipage})
+        return render(request, "onepiece/traitementequipage.html", {"equipage" : equipage})
     else:
         return render(request, "onepiece/creationequipage.html", {"form" : lform})
     
 def voirequipages(request):
     liste = list(models.Equipage.objects.all())
     return render(request,"onepiece/listeequipages.html", {"liste" : liste})
+
+def afficheequipage(request, id):
+    equipage = models.Equipage.objects.get( pk = id)
+    return render(request,"onepiece/equipage.html", {"equipage" : equipage})

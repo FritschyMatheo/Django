@@ -1,9 +1,14 @@
 {% extends "onepiece/main.html" %}
 
-{% block title %} Page traitement {% endblock %} {% block content %}
+{% block title %} Page affiche équipage {% endblock %} {% block content %}
     
-<p>Vous avez modifié l'équipage {{equipage}}</p>
-<a href="/onepiece/equipages">Voir la liste des équipages</a>
+<h1>Informations sur l'équipage : {{equipage.nom}} </h1>
+<ol>
+    <li>Nom : {{equipage.nom}}</li>
+    <li>Capitaine : {{equipage.capitaine}}</li>
+    <li>Bateau : {{equipage.nombateau}}</li>
+    <li>Apparition : {{equipage.premiereapparition}}</li>
+</ol>
 
 
 {% endblock %}
