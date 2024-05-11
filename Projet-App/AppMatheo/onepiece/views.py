@@ -14,7 +14,7 @@ def ajoutequipage(request):
 
         """if form.is_valid():
             Equipage = form.save()"""
-        return HttpResponseRedirect("/onepiece")
+        return HttpResponseRedirect("/onepiece/equipages")
         #return render(request,"onepiece/equipage.html",{"form" : form})
     
         """else:
@@ -50,6 +50,11 @@ def traitementupdate(request, id):
         equipage = lform.save(commit=False)
         equipage.id = id
         equipage.save()
-        return HttpResponseRedirect("/onepiece")
+        return HttpResponseRedirect("/onepiece/equipages")
     else:
         return render(request, "onepiece/creationequipage.html", {"form" : lform, "id": id})
+    
+def delete(request, id):
+    equipage = models.Equipage.objects.get( pk = id)
+    equipage.delete()
+    return HttpResponseRedirect("/onepiece/equipages")

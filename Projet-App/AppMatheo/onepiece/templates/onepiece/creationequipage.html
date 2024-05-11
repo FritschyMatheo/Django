@@ -2,15 +2,14 @@
 
 <h1>Ajout d'un équipage à la base de données</h1>
 
-    {% if id != '' %}
+    {% if id %}
         <form method="post" action="/onepiece/traitementupdate/{{id}}/">
-
-    {% else %}
+     {% else %}
         <form method="post" action="/onepiece/traitementequipage/">
-    {% endif %}
+     {% endif %}
     {% csrf_token %}
     {{ form.as_ul }}
-    <input type="submit" value="Envoyer les données" />
+    <input type="submit" value="Envoyer les données"/>
     </form>
 
 {% endblock %}
