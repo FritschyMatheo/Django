@@ -1,7 +1,8 @@
 {% extends "onepiece/main.html" %}
 
-{% block title %} Page creation équipage {% endblock %} {% block content %}
+{% block title %} Page ajout équipage {% endblock %} {% block content %}
     
+<h1>Ajout d'un équipage à la base de données</h1>
 <form method="post" action="/onepiece/traitementequipage/">
     {% csrf_token %}
     {{ form.as_ul }}

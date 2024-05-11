@@ -11,11 +11,14 @@ def index(request):
 def ajoutequipage(request):
     if request.method == "POST":
         form = EquipageForm(request)
-        if form.is_valid():
-            Equipage = form.save()
-            return render(request,"onepiece/equipage.html",{"Equipage" : Equipage})
-        else:
-            return render(request,"onepiece/creationequipage.html",{"form":form})
+
+        """if form.is_valid():
+            Equipage = form.save()"""
+        
+        return render(request,"onepiece/equipage.html",{"Equipage" : form})
+    
+        """else:
+            return render(request,"onepiece/creationequipage.html",{"form":form})"""
     else:
         form = EquipageForm()
         return render(request,"onepiece/creationequipage.html",{"form":form})
@@ -23,11 +26,11 @@ def ajoutequipage(request):
 def traitementEquipage(request):
     lform = EquipageForm(request.POST)
     if lform.is_valid():
-        Equipage = lform.save()
-        return render(request, "onepiece/equipage.html", {"Equipage" : Equipage})
+        equipage = lform.save()
+        return render(request, "onepiece/equipage.html", {"Equipage" : equipage})
     else:
         return render(request, "onepiece/creationequipage.html", {"form" : lform})
     
 def voirequipages(request):
-    Equipages = list(models.Equipage.objects.all())
-    return render(request,"onepiece/listeequipages.html", {"Equipage" : Equipages})
+    equipages = list(models.Equipage.objects.all())
+    return render(request,"onepiece/listeequipages.html", {"Equipage" : equipages})
