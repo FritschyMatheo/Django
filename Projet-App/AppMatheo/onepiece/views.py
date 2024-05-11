@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponseRedirect
 from .forms import EquipageForm
 from . import models
 
@@ -14,8 +14,8 @@ def ajoutequipage(request):
 
         """if form.is_valid():
             Equipage = form.save()"""
-        
-        return render(request,"onepiece/equipage.html",{"form" : form})
+        return HttpResponseRedirect("/onepiece")
+        #return render(request,"onepiece/equipage.html",{"form" : form})
     
         """else:
             return render(request,"onepiece/creationequipage.html",{"form":form})"""
