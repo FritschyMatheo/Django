@@ -1,2 +1,6 @@
 views de équipage s'il n'y a pas de bateau
 /onepiece/membres ?
+
+Détails équipage Appartition : CHAPITRE xxx
+
+Key avancé
