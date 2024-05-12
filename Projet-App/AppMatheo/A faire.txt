@@ -1,6 +1,8 @@
 views de équipage s'il n'y a pas de bateau
 /onepiece/membres ?
 
+modif les boutons de l'accueil
+
 Détails équipage Appartition : CHAPITRE xxx
 
 Key avancé

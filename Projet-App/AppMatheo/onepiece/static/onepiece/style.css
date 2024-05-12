@@ -23,7 +23,7 @@ nav{
 }
 
 a{
-    color: #E5EAE4;
+    color: #ffffff;
     text-decoration: wavy;
     text-align: center;
 }
@@ -55,6 +55,13 @@ article{
     flex-wrap: wrap;
     background-color: #902B3D ;
     color: white;
+    border-radius: 6px;
+}
+
+article.accueil a{
+    padding: 6px;
+    padding-inline: 8px;
+    background-color: #AC8858 ;
     border-radius: 6px;
 }
 
@@ -93,6 +100,7 @@ div.liste a{
 footer#fin{
     background-color: #AC8858;
     padding: 5px;
+    margin-inline: 15px;
     margin-top: 15px;
     display: flex;
     justify-content: center;
