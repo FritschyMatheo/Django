@@ -23,6 +23,8 @@ class Membre(models.Model):
     poste=models.CharField(max_length=100)
     prime=models.IntegerField(null = True, blank=True)
     fruit=models.CharField(max_length=100, null = True, blank=True)
+    equipage = models.ForeignKey("equipage", on_delete=models.CASCADE)
+
     def __str__(self):
         if self.prime is not None and self.fruit is not None:
             chaine = f"{self.nom} est {self.poste} de l'équipage. Il a une prime de {self.prime} berrys et possède le pouvoir du fruit : {self.fruit}."
@@ -35,4 +37,4 @@ class Membre(models.Model):
         return chaine
     
     def dictionnaire(self):
-        return {"nom": self.nom, "poste": self.poste, "prime": self.prime, "fruit": self.fruit}
+        return {"nom": self.nom, "poste": self.poste, "prime": self.prime, "fruit": self.fruit, "equipage": self.equipage}
