@@ -1,0 +1,15 @@
+{% extends "onepiece/main.html" %}
+
+{% block title %} Page traitement membre {% endblock %} {% block content %}
+   
+<article>
+<p>Vous avez modifié le membre : {{membre}}</p>
+<footer>
+    <a href="/onepiece/membres">Voir la liste des équipages</a>
+    <a href="/onepiece/updatemembre/{{membre.id}}/">Modifier</a>
+    <a href="/onepiece/deletemembre/{{membre.id}}/">Supprimer</a>
+</footer>
+</article>
+
+
+{% endblock %}

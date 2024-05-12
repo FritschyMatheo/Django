@@ -3,9 +3,11 @@
 {% block title %} Page traitement {% endblock %} {% block content %}
    
 <article>
-<p>Vous avez modifié l'équipage {{equipage}}</p>
+<p>Vous avez modifié l'équipage : {{equipage}}</p>
 <footer>
-<a href="/onepiece/equipages">Voir la liste des équipages</a>
+    <a href="/onepiece/equipages">Voir la liste des équipages</a>
+    <a href="/onepiece/update/{{equipage.id}}/">Modifier</a>
+    <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a>
 </footer>
 </article>
 

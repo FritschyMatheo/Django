@@ -1,0 +1,21 @@
+{% extends "onepiece/main.html" %}
+
+{% block title %} Page affiche membre {% endblock %} {% block content %}
+  
+<article>
+    <h2>Informations sur le membre : {{membre.nom}} </h2>
+    <ol>
+        <li>Nom : {{membre.nom}}</li>
+        <li>Poste : {{membre.poste}}</li>
+        <li>Prime : {{membre.prime}}</li>
+        <li>Fruit : {{membre.fruit}}</li>
+    </ol>
+    <footer>
+        <a href="/onepiece/membres">Voir la liste des équipages</a>
+        <a href="/onepiece/updatemembre/{{membre.id}}/">Modifier</a>
+        <a href="/onepiece/deletemembre/{{membre.id}}/">Supprimer</a>
+    </footer>
+</article>
+
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "onepiece/main.html" %}
+
+{% block title %} Les membres {% endblock %} {% block content %}
+  
+<article>
+<h2>Voici la liste des membres</h2>
+<ol>
+    {% for membre in liste %}
+        <li>{{membre}} <div class="liste"><a href="/onepiece/membre/{{membre.id}}/">Afficher</a> <a href="/onepiece/updatemembre/{{membre.id}}/">Modifier</a> <a href="/onepiece/deletemembre/{{membre.id}}/">Supprimer</a></div></li>
+    {% endfor %}
+</ol>
+</article>
+
+{% endblock %}
