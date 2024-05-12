@@ -2,7 +2,7 @@ from django.shortcuts import render, HttpResponseRedirect
 from .forms import MembreForm
 from . import models
 
-def ajoutmembre(request):
+def ajout(request):
     if request.method == "POST":
         form = MembreForm(request)
         return HttpResponseRedirect("/onepiece/membres")    #A CREER
@@ -10,7 +10,7 @@ def ajoutmembre(request):
         form = MembreForm()
         return render(request,"onepiece/membres/creationmembre.html",{"form":form})
 
-def traitementmembre(request):
+def traitement(request):
     lform = MembreForm(request.POST)
     if lform.is_valid():
         membre = lform.save()
@@ -22,7 +22,7 @@ def voirmembres(request):
     liste = list(models.Membre.objects.all())
     return render(request,"onepiece/membres/listemembres.html", {"liste" : liste})
 
-def affichemembre(request, id):
+def affiche(request, id):
     membre = models.Membre.objects.get( pk = id)
     return render(request,"onepiece/membres/membre.html", {"membre" : membre})
 

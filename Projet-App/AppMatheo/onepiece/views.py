@@ -8,7 +8,7 @@ from . import models
 def index(request):
     return render(request, 'onepiece/index.html')
 
-def ajoutequipage(request):
+def ajout(request):
     if request.method == "POST":
         form = EquipageForm(request)
 
@@ -23,7 +23,7 @@ def ajoutequipage(request):
         form = EquipageForm()
         return render(request,"onepiece/equipages/creationequipage.html",{"form":form})
 
-def traitementEquipage(request):
+def traitement(request):
     lform = EquipageForm(request.POST)
     if lform.is_valid():
         equipage = lform.save()
@@ -35,7 +35,7 @@ def voirequipages(request):
     liste = list(models.Equipage.objects.all())
     return render(request,"onepiece/equipages/listeequipages.html", {"liste" : liste})
 
-def afficheequipage(request, id):
+def affiche(request, id):
     equipage = models.Equipage.objects.get( pk = id)
     return render(request,"onepiece/equipages/equipage.html", {"equipage" : equipage})
 
