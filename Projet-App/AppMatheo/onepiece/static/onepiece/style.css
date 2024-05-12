@@ -95,7 +95,7 @@ footer#fin{
     padding: 5px;
     margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #E5EAE4;
 }
