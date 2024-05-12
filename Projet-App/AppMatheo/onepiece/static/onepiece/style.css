@@ -54,7 +54,7 @@ article{
     flex-direction: column;
     flex-wrap: wrap;
     background-color: #902B3D ;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 6px;
 }
 
@@ -77,6 +77,10 @@ article footer{
     border-radius: 6px;
     padding: 6px;
     padding-inline: 8px;
+}
+
+article.accueil footer{
+    align-self: center;
 }
 
 li{
@@ -103,7 +107,6 @@ footer#fin{
     margin-inline: 15px;
     margin-top: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #E5EAE4;
+    justify-content: space-between;
+    color: #ffffff;
 }
