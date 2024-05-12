@@ -12,3 +12,14 @@ class EquipageForm(ModelForm):
             'capitaine' : _('Capitaine de l\'équipage'),
             'premiereapparition' : _('Chapitre de première apparition')
         }
+
+class MembreForm(ModelForm):
+    class Meta:
+        model = models.Membre
+        fields = ('nom', 'poste', 'prime', 'fruit')
+        labels={
+            'nom' : _('Nom'),
+            'poste' : _('Poste'),
+            'prime' : _('Prime'),
+            'fruit' : _('Fruit du démon')
+        }

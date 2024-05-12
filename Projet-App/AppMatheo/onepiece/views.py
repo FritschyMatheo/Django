@@ -21,28 +21,28 @@ def ajoutequipage(request):
             return render(request,"onepiece/creationequipage.html",{"form":form})"""
     else:
         form = EquipageForm()
-        return render(request,"onepiece/creationequipage.html",{"form":form})
+        return render(request,"onepiece/equipages/creationequipage.html",{"form":form})
 
 def traitementEquipage(request):
     lform = EquipageForm(request.POST)
     if lform.is_valid():
         equipage = lform.save()
-        return render(request, "onepiece/traitementequipage.html", {"equipage" : equipage})
+        return render(request, "onepiece/equipages/traitementequipage.html", {"equipage" : equipage})
     else:
-        return render(request, "onepiece/creationequipage.html", {"form" : lform})
+        return render(request, "onepiece/equipages/creationequipage.html", {"form" : lform})
     
 def voirequipages(request):
     liste = list(models.Equipage.objects.all())
-    return render(request,"onepiece/listeequipages.html", {"liste" : liste})
+    return render(request,"onepiece/equipages/listeequipages.html", {"liste" : liste})
 
 def afficheequipage(request, id):
     equipage = models.Equipage.objects.get( pk = id)
-    return render(request,"onepiece/equipage.html", {"equipage" : equipage})
+    return render(request,"onepiece/equipages/equipage.html", {"equipage" : equipage})
 
 def update(request, id):
     equipage = models.Equipage.objects.get( pk = id)
     form = EquipageForm(equipage.dictionnaire())
-    return render(request, "onepiece/creationequipage.html", {"form" : form, "id": id})
+    return render(request, "onepiece/equipages/creationequipage.html", {"form" : form, "id": id})
 
 def traitementupdate(request, id):
     lform = EquipageForm(request.POST)
@@ -52,7 +52,7 @@ def traitementupdate(request, id):
         equipage.save()
         return HttpResponseRedirect("/onepiece/equipages")
     else:
-        return render(request, "onepiece/creationequipage.html", {"form" : lform, "id": id})
+        return render(request, "onepiece/equipages/creationequipage.html", {"form" : lform, "id": id})
     
 def delete(request, id):
     equipage = models.Equipage.objects.get( pk = id)

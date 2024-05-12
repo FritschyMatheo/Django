@@ -33,3 +33,6 @@ class Membre(models.Model):
         else:
             chaine = f"{self.nom} est {self.poste} de l'équipage."
         return chaine
+    
+    def dictionnaire(self):
+        return {"nom": self.nom, "poste": self.poste, "prime": self.prime, "fruit": self.fruit}
