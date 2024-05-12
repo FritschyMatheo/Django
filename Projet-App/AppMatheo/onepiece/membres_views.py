@@ -2,19 +2,23 @@ from django.shortcuts import render, HttpResponseRedirect
 from .forms import MembreForm
 from . import models
 
-def ajout(request):
-    if request.method == "POST":
+def ajout(request, id):
+    """if request.method == "POST":
         form = MembreForm(request)
-        return HttpResponseRedirect("/onepiece/membres")    #A CREER
-    else:
-        form = MembreForm()
-        return render(request,"onepiece/membres/creationmembre.html",{"form":form})
+        return HttpResponseRedirect("/onepiece/membres")
+    else:"""
+    form = MembreForm()
+    return render(request,"onepiece/membres/creationmembre.html",{"form":form, "id": id})
 
-def traitement(request):
+def traitement(request, id):
+    equipage = models.Equipage.objects.get(pk = id)
     lform = MembreForm(request.POST)
     if lform.is_valid():
-        membre = lform.save()
-        return render(request, "onepiece/membres/traitementmembre.html", {"membre" : membre})
+        membre = lform.save(commit=False)
+        membre.equipage = equipage
+        membre.equipage_id = id
+        membre.save()
+        return HttpResponseRedirect("/onepiece/membres/")
     else:
         return render(request, "onepiece/membres/creationmembre.html", {"form" : lform})
 

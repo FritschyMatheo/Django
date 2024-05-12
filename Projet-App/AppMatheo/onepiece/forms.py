@@ -16,11 +16,10 @@ class EquipageForm(ModelForm):
 class MembreForm(ModelForm):
     class Meta:
         model = models.Membre
-        fields = ('nom', 'poste', 'prime', 'fruit', 'equipage')
+        fields = ('nom', 'poste', 'prime', 'fruit')
         labels={
             'nom' : _('Nom'),
             'poste' : _('Poste'),
             'prime' : _('Prime'),
             'fruit' : _('Fruit du démon'),
-            'equipage' : _('Equipage du pirate')
         }

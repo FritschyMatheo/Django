@@ -6,15 +6,12 @@
     {% if id %}
         <form method="post" action="/onepiece/traitementupdatemembre/{{id}}/">
      {% else %}
-        <form method="post" action="/onepiece/traitementmembre/">
+        <form method="post" action="/onepiece/traitementmembre/{{id}}/">
      {% endif %}
     {% csrf_token %}
     {{ form.as_ul }}
     <input type="submit" value="Envoyer les données"/>
     </form>
-    <footer>
-        <a href="/onepiece/membres">Voir la liste des membres</a>
-    </footer>
 </article>
 
 {% endblock %}

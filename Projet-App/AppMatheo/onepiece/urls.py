@@ -15,8 +15,8 @@ urlpatterns = [
     path('delete/<int:id>/', views.delete),
 
     # Partie membres
-    path('ajoutmembre/', membres_views.ajout),
-    path('traitementmembre/', membres_views.traitement),
+    path('ajoutmembre/<int:id>/', membres_views.ajout),
+    path('traitementmembre/<int:id>/', membres_views.traitement),
     path('membres/', membres_views.voirmembres),
     path('membre/<int:id>/', membres_views.affiche),
     path('updatemembre/<int:id>/', membres_views.update),
