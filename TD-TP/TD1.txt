@@ -75,5 +75,6 @@ python manage.py runserver
 
 
 On accède à la page avec : http://127.0.0.1:8000/myfirstapp/index/
+http://127.0.0.1:8000/onepiece/
 
 C:\Users\e2303115\AppData\Local\Programs\Python\Python311\python.exe
