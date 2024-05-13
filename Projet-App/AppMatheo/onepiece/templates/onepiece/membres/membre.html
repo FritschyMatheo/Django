@@ -6,10 +6,16 @@
     <h2>Informations sur le membre : {{membre.nom}} </h2>
     <ol>
         <li>Nom : {{membre.nom}}</li>
-        <li>Poste : {{membre.poste}}</li>
-        <li>Prime : {{membre.prime}}</li>
-        <li>Fruit : {{membre.fruit}}</li>
         <li>Equipage : {{membre.equipage}}</li>
+        <li>Poste : {{membre.poste}}</li>
+        
+        {% if membre.prime %}
+            <li>Prime : {{membre.prime}}</li>
+        {% endif %}   
+        {% if membre.fruit %}
+            <li>Fruit : {{membre.fruit}}</li>
+        {% endif %}   
+        
     </ol>
     <footer>
         <a href="/onepiece/membres">Voir la liste des membres</a>

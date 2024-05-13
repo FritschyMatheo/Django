@@ -6,3 +6,17 @@ Remplacer listes membres par liste pirates
 Détails équipage Appartition : CHAPITRE xxx
 
 Key avancé ~V
+
+Rendre prime facultative
+
+
+Mettre footer en bas
+
+bouton liste équipages à centrer
+
+
+quand je modif il se supprime pas
+
+modifier page modif membre (boutons)
+
+Il y a deux points à la fin de la phrase des bateaux

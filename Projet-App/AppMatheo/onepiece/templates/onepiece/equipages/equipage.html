@@ -8,7 +8,9 @@
         <li>Nom : {{equipage.nom}}</li>
         <li>Capitaine : {{equipage.capitaine}}</li>
         <li>Bateau : {{equipage.nombateau}}</li>
-        <li>Apparition : {{equipage.premiereapparition}}</li>
+        {% if equipage.premiereapparition %}
+            <li>Apparition chapitre : {{equipage.premiereapparition}}</li>
+        {% endif %}   
     </ol>
     <footer>
         <a href="/onepiece/ajoutmembre/{{equipage.id}}/">Ajouter un membre</a>

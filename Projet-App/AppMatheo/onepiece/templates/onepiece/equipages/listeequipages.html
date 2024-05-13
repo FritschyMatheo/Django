@@ -1,14 +1,22 @@
-{% extends "onepiece/main.html" %}
+{% extends "onepiece/main.html" %} {% block title %} Les équipages {% endblock%} {% block content %}
 
-{% block title %} Les équipages {% endblock %} {% block content %}
-  
 <article>
-<h2>Voici la liste des équipages</h2>
-<ol>
+  <h2>Voici la liste des équipages</h2>
+  <ol>
     {% for equipage in liste %}
-        <li>{{equipage}} <div class="liste"><a href="/onepiece/equipage/{{equipage.id}}/">Afficher</a> <a href="/onepiece/update/{{equipage.id}}/">Modifier</a> <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a></div></li>
+    <li>
+      {{equipage}}
+      <div class="liste">
+        <a href="/onepiece/equipage/{{equipage.id}}/">Afficher</a>
+        <a href="/onepiece/update/{{equipage.id}}/">Modifier</a>
+        <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a>
+      </div>
+    </li>
     {% endfor %}
-</ol>
+    <footer class="centre">
+        <a href="/onepiece/ajoutequipage">Créer un équipage</a>
+    </footer>
+  </ol>
 </article>
 
 {% endblock %}
