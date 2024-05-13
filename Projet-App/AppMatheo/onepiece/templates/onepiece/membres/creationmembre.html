@@ -3,7 +3,11 @@
 <article>
 <h2>Ajout d'un membre à la base de données</h2>
 
-    <form method="post" action="/onepiece/traitementmembre/{{id}}/">
+    {% if id %}
+        <form method="post" action="/onepiece/traitementmembre/{{id}}/">
+     {% else %}
+        <form method="post" action="/onepiece/traitementmembre/">
+     {% endif %}
         
     {% csrf_token %}
     {{ form.as_ul }}

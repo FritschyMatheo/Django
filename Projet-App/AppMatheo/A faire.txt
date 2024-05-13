@@ -1,8 +1,8 @@
-views de équipage s'il n'y a pas de bateau
-/onepiece/membres ?
 
-modif les boutons de l'accueil
+modif les boutons de l'accueil ajouter liste pirates
+
+Remplacer listes membres par liste pirates
 
 Détails équipage Appartition : CHAPITRE xxx
 
-Key avancé
+Key avancé ~V
