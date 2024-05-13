@@ -23,17 +23,17 @@ class Membre(models.Model):
     poste=models.CharField(max_length=100)
     prime=models.IntegerField(null = True, blank=True)
     fruit=models.CharField(max_length=100, null = True, blank=True)
-    equipage = models.ForeignKey("equipage", on_delete=models.CASCADE)
+    equipage = models.ForeignKey("equipage", on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         if self.prime is not None and self.fruit is not None:
-            chaine = f"{self.nom} est {self.poste} de l'équipage. Il a une prime de {self.prime} berrys et possède le pouvoir du fruit : {self.fruit}."
+            chaine = f"{self.nom} est {self.poste} de l'équipage {self.equipage}. Il a une prime de {self.prime} berrys et possède le pouvoir du fruit : {self.fruit}."
         elif self.prime is not None:
-            chaine = f"{self.nom} est {self.poste} de l'équipage. Il a une prime de {self.prime} berrys."
+            chaine = f"{self.nom} est {self.poste} de l'équipage {self.equipage}. Il a une prime de {self.prime} berrys."
         elif self.fruit is not None:
-            chaine = f"{self.nom} est {self.poste} de l'équipage. Il possède le pouvoir du fruit : {self.fruit}."
+            chaine = f"{self.nom} est {self.poste} de l'équipage {self.equipage}. Il possède le pouvoir du fruit : {self.fruit}."
         else:
-            chaine = f"{self.nom} est {self.poste} de l'équipage."
+            chaine = f"{self.nom} est {self.poste} de l'équipage {self.equipage}."
         return chaine
     
     def dictionnaire(self):
