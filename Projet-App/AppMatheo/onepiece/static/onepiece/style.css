@@ -12,6 +12,7 @@ html, body{
     align-items: start;
     flex-grow: 1;
     background-color:rgb(104, 187, 255) ;
+    background-image: url(Images/mer.jpg);
 }
 
 body{
@@ -29,6 +30,7 @@ main{
     flex-direction: column;
     justify-content: center;
     flex-grow: 1;
+    
 }
 
 nav{

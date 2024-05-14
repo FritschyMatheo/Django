@@ -18,7 +18,7 @@ def traitement(request, id):
         membre.equipage = equipage
         membre.equipage_id = id
         membre.save()
-        return HttpResponseRedirect("/onepiece/membres/")
+        return render(request, "onepiece/membres/traitementmembre.html", {"membre" : membre})
     else:
         return render(request, "onepiece/membres/creationmembre.html", {"form" : lform})
 
