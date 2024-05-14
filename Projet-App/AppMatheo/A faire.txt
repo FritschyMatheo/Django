@@ -1,6 +1,5 @@
 Code :
 
-Remplacer listes membres par liste pirates
 
 Pouvoir ajouter membre depuis liste équipages
 
@@ -9,7 +8,4 @@ modifier page modif membre (boutons)
 
 CSS :
 
-modif les boutons de l'accueil ajouter liste pirates
 Mettre footer en bas
-bouton liste équipages à centrer
-div class liste a décal

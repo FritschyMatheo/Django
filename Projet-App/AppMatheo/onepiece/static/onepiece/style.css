@@ -7,11 +7,28 @@ html, body{
     height: 100%;
 }
 
+#content{
+    display: flex;
+    align-items: start;
+    flex-grow: 1;
+    background-color:rgb(104, 187, 255) ;
+}
+
 body{
     padding: 0px;
     margin: 0px;
     display: flex;
     flex-direction: column;
+}
+
+main{
+    margin: 0px auto;
+    padding: 5px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
 }
 
 nav{
@@ -33,17 +50,6 @@ a:hover{
     color: #18191B;
 }
 
-main{
-    margin: 0px auto;
-    margin-block: 0px auto;
-    padding: 5px;
-    flex-grow: 1;
-
-    background-color: #E5EAE4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 /*------------articles------------*/
 
@@ -55,7 +61,7 @@ article{
     flex-wrap: wrap;
     background-color: #902B3D ;
     color: rgb(255, 255, 255);
-    border-radius: 6px;
+    border-radius: 8px;
 }
 
 article.accueil a{
@@ -68,6 +74,14 @@ article.accueil a{
 h2,h3,h4{
     align-self: flex-start;
     margin: 4px;
+}
+
+footer a{
+    margin-inline: 6px;
+}
+
+div a{
+    margin-inline: 0px;
 }
 
 article footer{
@@ -87,13 +101,14 @@ li{
     display: flex;
     flex-flow: row, wrap;
     justify-content: start;
-    margin-block: 6px;
+    margin-block: 10px;
 }
 
 
 div.liste{
     background-color: #AC8858 ;
     border-radius: 6px;
+    margin-inline: 16px;
 }
 
 div.liste a{
