@@ -36,10 +36,13 @@ def update(request, id):
     return render(request, "onepiece/membres/creationmembre.html", {"form" : form, "id": id})
 
 def traitementupdate(request, id):
+    equipage = models.Equipage.objects.get(pk = id)
     lform = MembreForm(request.POST)
     if lform.is_valid():
         membre = lform.save(commit=False)
         membre.id = id
+        #membre.equipage = equipage
+        membre.equipage_id = id
         membre.save()
         return HttpResponseRedirect("/onepiece/membres")
     else:
