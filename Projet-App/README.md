@@ -1,1 +1,0 @@
-Lien d'accès au serveur : http://127.0.0.1:8000/onepiece/
