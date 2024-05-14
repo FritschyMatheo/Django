@@ -7,11 +7,8 @@ class Equipage(models.Model):
     nombateau=models.CharField(max_length=100)
     capitaine=models.CharField(max_length=100)
     premiereapparition=models.IntegerField(null = True, blank=True)
-    def __str__(self):
-        if self.premiereapparition is not None:
-            chaine = f"{self.nom} dirigé par {self.capitaine} est apparu au chapitre {self.premiereapparition} et navigue avec {self.nombateau}."
-        else:
-            chaine = f"{self.nom} dirigé par {self.capitaine} et navigue avec {self.nombateau}."
+    def __str__(self):  
+        chaine = f"{self.nom} dirigé par {self.capitaine}, naviguant à bord de {self.nombateau}"
         return chaine
     
     def dictionnaire(self):

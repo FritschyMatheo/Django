@@ -5,9 +5,10 @@
   <ol>
     {% for equipage in liste %}
     <li>
-      {{equipage}}
+      <strong>{{equipage.nom}}</strong>
       <div class="liste">
         <a href="/onepiece/equipage/{{equipage.id}}/">Afficher</a>
+        <a href="/onepiece/ajoutmembre/{{equipage.id}}/">Ajouter un membre</a>
         <a href="/onepiece/update/{{equipage.id}}/">Modifier</a>
         <a href="/onepiece/delete/{{equipage.id}}/">Supprimer</a>
       </div>

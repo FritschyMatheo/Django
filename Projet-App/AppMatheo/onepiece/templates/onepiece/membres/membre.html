@@ -11,14 +11,18 @@
         
         {% if membre.prime %}
             <li>Prime : {{membre.prime}}</li>
+        {% else %}
+            <li>Prime : Pas de prime à son actif</li> 
         {% endif %}   
         {% if membre.fruit %}
             <li>Fruit : {{membre.fruit}}</li>
+        {% else %}
+            <li>Fruit : Aucun fruit du démon consommé</li>
         {% endif %}   
         
     </ol>
     <footer>
-        <a href="/onepiece/membres">Voir la liste des membres</a>
+        <a href="/onepiece/membres">Voir la liste des pirates</a>
         <a href="/onepiece/updatemembre/{{membre.id}}/">Modifier</a>
         <a href="/onepiece/deletemembre/{{membre.id}}/">Supprimer</a>
     </footer>

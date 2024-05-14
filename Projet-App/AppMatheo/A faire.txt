@@ -1,21 +1,8 @@
-
-modif les boutons de l'accueil ajouter liste pirates
+Code :
 
 Remplacer listes membres par liste pirates
 
-Détails équipage Appartition : CHAPITRE xxx
-
-Key avancé ~V
-
-Rendre prime facultative
-
-
-Mettre footer en bas
-
-bouton liste équipages à centrer
-
-
-quand je modif il se supprime pas
+Pouvoir ajouter membre depuis liste équipages
 
 modifier page modif membre (boutons)
 
@@ -23,3 +10,10 @@ Il y a deux points à la fin de la phrase des bateaux
 
 Str membre mettre juste nom capitaine et équipage
 et affiche aussi
+
+CSS :
+
+modif les boutons de l'accueil ajouter liste pirates
+Mettre footer en bas
+bouton liste équipages à centrer
+div class liste a décal

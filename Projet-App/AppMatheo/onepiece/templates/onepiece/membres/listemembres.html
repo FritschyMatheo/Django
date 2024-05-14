@@ -6,7 +6,7 @@
   <ol>
     {% for membre in liste %}
     <li>
-      {{membre}}
+      <strong>{{membre.nom}}</strong>, {{membre.poste}} de l'équipage {{membre.equipage}}.
       <div class="liste">
         <a href="/onepiece/membre/{{membre.id}}/">Afficher</a>
         <a href="/onepiece/updatemembre/{{membre.id}}/">Modifier</a>
