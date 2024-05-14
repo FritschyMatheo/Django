@@ -6,10 +6,6 @@ Pouvoir ajouter membre depuis liste équipages
 
 modifier page modif membre (boutons)
 
-Il y a deux points à la fin de la phrase des bateaux
-
-Str membre mettre juste nom capitaine et équipage
-et affiche aussi
 
 CSS :
 

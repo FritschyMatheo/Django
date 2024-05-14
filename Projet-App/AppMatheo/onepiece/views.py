@@ -50,7 +50,7 @@ def traitementupdate(request, id):
         equipage = lform.save(commit=False)
         equipage.id = id
         equipage.save()
-        return HttpResponseRedirect("/onepiece/equipages")
+        return render(request, "onepiece/equipages/traitementequipage.html", {"equipage" : equipage})
     else:
         return render(request, "onepiece/equipages/creationequipage.html", {"form" : lform, "id": id})
     

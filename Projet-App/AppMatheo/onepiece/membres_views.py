@@ -41,7 +41,7 @@ def traitementupdate(request, id):
     if lform.is_valid():
         membre = lform.save(commit=False)
         membre.id = id
-        #membre.equipage = equipage
+        membre.equipage = equipage
         membre.equipage_id = id
         membre.save()
         return HttpResponseRedirect("/onepiece/membres")
